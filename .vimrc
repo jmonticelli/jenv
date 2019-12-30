@@ -19,6 +19,11 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
+" Make sure that we automatically change our directory when editing a
+" different file. Nothing is more annoying than expecting to be running
+" commands from the directory of the file you're editing, and finding out that
+" you're not even close to where that is.
+set autochdir
 
 " Stolen from Martin Tournoij from StackExchange
 " Trims excess whitespace before writing a buffer
