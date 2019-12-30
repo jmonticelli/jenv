@@ -1,0 +1,22 @@
+###### Aliases ######
+
+# TODO: should make this optional
+# In /most/ circumstances, if you have NVim, you should be using NVim
+if [ -n "$(which vim)" -a -n "$(which nvim)" ] ; then
+    alias vim='nvim'
+fi
+
+# Useful for crawling up directories sequentially
+if [ -z "$(which lsd)" ] ; then
+    alias lsd='cd .. && ls'
+fi
+
+# If you do a lot of sysadmin stuff, this alias is very nice
+if [ -n "$(which systemctl)" -a -z "$(which sctl)" ] ; then
+    alias sctl='systemctl'
+fi
+
+###### Safeties ######
+
+# Better safe than sorry (maybe?)
+alias rm='rm -i'
