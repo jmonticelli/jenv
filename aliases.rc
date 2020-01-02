@@ -5,21 +5,65 @@
 # (C) 2019 Julian Monticelli <j.m.monticelli@gmail.com>
 ###############################################################################
 
+function path_exists()
+{(
+    set -eu pipefail
+    if [ -n "$(which $1)" ] ; then
+        return 0
+    else
+        return 1
+    fi
+)}
+
+function alias_exists
+{(
+    set -eu pipefail
+    if [ -n "$(which $1)" ] ; then
+        return 0
+    else
+        return 1
+    fi
+)}
+
+function no_path_exists()
+{
+    if ! (path_exists "$1") ; then
+        return 0
+    fi
+    return 1
+}
+
+function no_alias_exists()
+{
+    if ! (alias_exists "$1") ; then
+        return 0
+    fi
+    return 1
+}
+
+function no_conflicting_command()
+{
+    if (no_path_exists "$1") && (no_alias_exists "$1") ; then
+        return 0
+    fi
+    return 1
+}
+
 ###### Aliases ######
 
 # TODO: should make this optional
 # In /most/ circumstances, if you have NVim, you should be using NVim
-if [ -n "$(which vim)" -a -n "$(which nvim)" ] ; then
+if (path_exists "vim") && (path_exists "nvim") ; then
     alias vim='nvim'
 fi
 
 # Useful for crawling up directories sequentially
-if [ -z "$(which lsd)" ] ; then
+if (no_conflicting_command "lsd") ; then
     alias lsd='cd .. && ls'
 fi
 
 # If you do a lot of sysadmin stuff, this alias is very nice
-if [ -n "$(which systemctl)" -a -z "$(which sctl)" ] ; then
+if (path_exists "systemctl") && (no_conflicting_command "sctl") ; then
     alias sctl='systemctl'
 fi
 
