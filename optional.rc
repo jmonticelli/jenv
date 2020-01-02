@@ -1,6 +1,6 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-SUDO_PROMPT='gimme the magic juice'
+export SUDO_PROMPT='This operation requires elevated privilege: '
 
 MODULES="aliases.rc"
 
