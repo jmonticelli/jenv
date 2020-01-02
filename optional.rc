@@ -1,3 +1,10 @@
+###############################################################################
+# This optional.rc is a minimalistic, modular optional bash run commands file
+# which aims to easily provide the means of hooking in and out of jenv.
+#
+# (C) 2019 Julian Monticelli <j.m.monticelli@gmail.com>
+###############################################################################
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 export SUDO_PROMPT='This operation requires elevated privilege: '

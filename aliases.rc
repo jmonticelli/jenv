@@ -1,3 +1,10 @@
+###############################################################################
+# This aliases.rc file is designed to provide aliases that are only a part of
+# the jenv environment.
+#
+# (C) 2019 Julian Monticelli <j.m.monticelli@gmail.com>
+###############################################################################
+
 ###### Aliases ######
 
 # TODO: should make this optional

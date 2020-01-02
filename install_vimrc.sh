@@ -1,3 +1,13 @@
+###############################################################################
+# This install_vimrc.sh file is designed to install a Vim/Neovim configuration
+# to the user home directory.
+#
+# This script is designed for use AS-IS, and offers no warranty and assumes no
+# liability for any potential damages or problems. Use at your own risk.
+#
+# (C) 2019 Julian Monticelli <j.m.monticelli@gmail.com>
+###############################################################################
+
 DIR="$(dirname $0)"
 
 mkdir -p ~/.vim
@@ -15,7 +25,7 @@ if [ -n "$(which nvim)" ] ; then
         echo "Skipping creation of $CONFIG_NVIM_INIT because it already exists"
     fi
 else
-    echo "Skipping nvim install because nvim was not detected" 
+    echo "Skipping nvim install because nvim was not detected"
 fi
 
 if [ ! -f ~/.vimrc ] ; then
