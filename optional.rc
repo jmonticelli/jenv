@@ -11,7 +11,8 @@ export SUDO_PROMPT='This operation requires elevated privilege: '
 
 MODULES="aliases.rc"
 
-EDITOR="nvim"
+export VISUAL="nvim"
+export EDITOR=$VISUAL
 
 for MODULE in $MODULES ; do
     echo -e "Loading $MODULE... \c"
