@@ -7,7 +7,7 @@
 
 function path_exists()
 {(
-    set -eu pipefail
+    set -euo pipefail
     if [ -n "$(which $1)" ] ; then
         return 0
     else
