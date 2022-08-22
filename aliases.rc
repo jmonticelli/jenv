@@ -67,6 +67,11 @@ if (path_exists "systemctl") && (no_conflicting_command "sctl") ; then
     alias sctl='systemctl'
 fi
 
+# Useful for crawling up directories sequentially
+if (no_conflicting_command "lsd") ; then
+    alias gitfco='git fetch && git checkout'
+fi
+
 ###### Safeties ######
 
 # Better safe than sorry (maybe?)
