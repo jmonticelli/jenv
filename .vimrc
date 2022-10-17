@@ -25,6 +25,12 @@ set shiftwidth=4
 " you're not even close to where that is.
 set autochdir
 
+" Undolevels have saved the day at just 1000. I don't think it's absolutely
+" necessary for the average case, but I do believe it may save someone some
+" day to have more undolevels. This obviously might negatively impact vim
+" performance at the expense at history
+set undolevels=20000
+
 " Stolen from Martin Tournoij from StackExchange
 " Trims excess whitespace before writing a buffer
 fun! TrimWhitespace()
