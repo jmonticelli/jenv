@@ -72,6 +72,11 @@ if (no_conflicting_command "lsd") ; then
     alias gitfco='git fetch && git checkout'
 fi
 
+if (no_conflicting_command "copyclipboard") ; then
+    alias copyclipoard='xclip -selection clipboard'
+fi
+
+
 ###### Safeties ######
 
 # Better safe than sorry (maybe?)
