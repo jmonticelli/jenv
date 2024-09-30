@@ -49,6 +49,12 @@ function no_conflicting_command()
     return 1
 }
 
+nvidia_fonzbonk()
+{
+    sudo rmmod nvidia_uvm
+    sudo modprobe nvidia_uvm
+}
+
 ###### Aliases ######
 
 # TODO: should make this optional
