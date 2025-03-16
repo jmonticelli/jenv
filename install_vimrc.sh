@@ -28,7 +28,7 @@ else
     echo "Skipping nvim install because nvim was not detected"
 fi
 
-if [ ! -f ~/.vimrc ] ; then
+if ! [ -f ~/.vimrc ] ; then
     ln -s "$(realpath $DIR/.vimrc)" ~/.vimrc
     echo "Created .vimrc softlink"
 else
