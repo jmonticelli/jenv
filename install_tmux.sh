@@ -13,7 +13,7 @@ DIR="$(dirname $0)"
 mkdir -p ~/.vim
 
 if ! [ -f ~/.tmux.conf ] ; then
-    ln -s "$(realpath $DIR/.tmux.conf)" ~/.vimrc
+    ln -s "$(realpath $DIR/.tmux.conf)" ~/.tmux.conf
     echo "Created .tmux.conf softlink"
 else
     echo "Failed to install .tmux.conf. File already exists"
