@@ -2,7 +2,8 @@
 " A minimalistic .vimrc file, to provide the bare essentials for a smooth vim
 " session. Should be compatible with Vim or Nvim.
 "
-" (C) 2019 Julian Monticelli
+" (C) 2025 Julian Monticelli
+" Licensed under the MIT License
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 

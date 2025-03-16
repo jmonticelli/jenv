@@ -5,7 +5,8 @@
 # This script is designed for use AS-IS, and offers no warranty and assumes no
 # liability for any potential damages or problems. Use at your own risk.
 #
-# (C) 2025 Julian Monticelli <j.m.monticelli@gmail.com>
+# (C) 2025 Julian Monticelli
+# Licensed under the MIT License
 ###############################################################################
 
 DIR="$(dirname $0)"

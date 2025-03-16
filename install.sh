@@ -1,3 +1,11 @@
+###############################################################################
+# This script calls sub-install scripts conditionally, based on the belief
+# that the relevant program is installed on the system.
+#
+# (C) 2025 Julian Monticelli
+# Licensed under the MIT License
+###############################################################################
+
 _script_dir="$(readlink -m "$(dirname "${BASH_SOURCE[0]}")")"
 
 echo $_script_dir
