@@ -32,6 +32,9 @@ set autochdir
 " performance at the expense at history
 set undolevels=20000
 
+" Relative line numbers for jumping to lines of code in view ergonomically
+set rnu
+
 " Stolen from Martin Tournoij from StackExchange
 " Trims excess whitespace before writing a buffer
 fun! TrimWhitespace()
